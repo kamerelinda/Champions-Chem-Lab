@@ -5,11 +5,8 @@ import TopNavbar from "@/components/TopNavbar.vue";
 
 
 <template>
-  <div class="max-w-screen-2xl h-screen bg-grey-1 mx-auto flex ">
+  <div class="max-w-screen-2xl flex mx-auto bg-grey-1">
     <SideBarUnregistered/>
-    <div>
-      <TopNavbar/>
-    </div>
-
+    <TopNavbar/>
   </div>
 </template>
