@@ -12,6 +12,9 @@ module.exports = {
         'grey-1': '#F8F8F8',
         'Neutral/500': '#64748B',
         'Neutral/100': '#E7EAEE',
+      },
+      fontFamily: {
+        manrope: ['Manrope', 'sans']
       }
     },
   },

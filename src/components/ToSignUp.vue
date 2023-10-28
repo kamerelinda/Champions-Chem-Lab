@@ -1,7 +1,7 @@
 <script setup lang="ts">
 </script>
 <template>
-  <div class="  flex gap-6">
+  <div class="flex gap-6 font-manrope">
     <div class="sm:hidden md:block my-auto text-Primary text-center text-sm font-semibold non-italic underline ">
       <a href="#">Send Invite</a>
     </div>
