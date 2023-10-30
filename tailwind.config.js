@@ -1,5 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
+  darkMode: 'class',
   content: [
     "./index.html",
     "./src/**/*.{vue,js,ts,jsx,tsx}",
@@ -12,7 +13,8 @@ module.exports = {
         'grey-1': '#F8F8F8',
         'Neutral/500': '#64748B',
         'Neutral/100': '#E7EAEE',
-        'GreyOverlay': 'rgba(56, 56, 56, 0.20)'
+        'GreyOverlay': 'rgba(56, 56, 56, 0.20)',
+        'Neutral/800': '#191D23'
       },
       fontFamily: {
         manrope: ['Manrope', 'sans']
