@@ -2,10 +2,9 @@
 import SideBarUnregistered from "@/components/SideBarUnregistered.vue";
 import Homepage1 from "@/components/Homepage1.vue";
 import AdminLogin from "@/components/AdminLogin.vue";
+import StudentLogin from "@/components/StudentLogin.vue";
 
 import {ref} from 'vue';
-
-
 const showModal = ref(false)
 </script>
 
@@ -14,7 +13,7 @@ const showModal = ref(false)
   <div v-show="showModal" class="absolute w-full h-full bg-GreyOverlay z-10 flex justify-center items-center">
     <AdminLogin/>
   </div>
-  <div v-show="showModal = true" class="absolute w-full h-full bg-GreyOverlay z-10 flex justify-center items-center">
+  <div v-show="showModal" class="absolute w-full h-full bg-GreyOverlay z-10 flex justify-center items-center">
     <StudentLogin/>
   </div>
   <div class="max-w-screen-2xl flex mx-auto bg-grey-1">
