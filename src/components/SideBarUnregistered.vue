@@ -8,7 +8,7 @@
 
   import {ref} from "vue";
 
-  const loggedin = ref(true)
+  const loggedin = ref(false)
 </script>
 
 <template>
