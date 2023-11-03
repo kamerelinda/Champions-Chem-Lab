@@ -14,7 +14,6 @@
           <LineIcon/>
         </div>
       </div>
-
       <div class="mx-auto mb-9">
         <SettingsLogo/>
       </div>
