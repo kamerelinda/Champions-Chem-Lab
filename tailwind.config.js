@@ -14,7 +14,9 @@ module.exports = {
         'Neutral/500': '#64748B',
         'Neutral/100': '#E7EAEE',
         'GreyOverlay': 'rgba(56, 56, 56, 0.20)',
-        'Neutral/800': '#191D23'
+        'Neutral/800': '#191D23',
+        'video1': '#3C3C3C',
+        'video2': '#D9D9D9'
       },
       fontFamily: {
         manrope: ['Manrope', 'sans']
