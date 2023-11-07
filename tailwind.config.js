@@ -18,6 +18,9 @@ module.exports = {
         'video1': '#3C3C3C',
         'video2': '#D9D9D9'
       },
+      boxShadow: {
+        'box1': '0px 0px 17px 17px rgba(0, 0, 0, 0.25)',
+      },
       fontFamily: {
         manrope: ['Manrope', 'sans']
       }
