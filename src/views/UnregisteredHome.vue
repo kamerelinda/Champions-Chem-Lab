@@ -18,7 +18,7 @@ const showStudentLogin= ref(false)
   <div v-show="showStudentLogin" class="absolute w-full h-full bg-GreyOverlay z-10 flex justify-center items-center">
     <StudentLogin/>
   </div>
-  <div class="sm:max-w-screen-2xl flex mx-auto bg-grey-1 sm:max-h-screen">
+  <div class="sm:max-w-screen-2xl flex mx-auto bg-grey-1 max-h-[1000]">
     <SideBarUnregistered/>
     <Homepage1/>
   </div>
