@@ -1,4 +1,5 @@
 <template>
+
   <p class=" ml-36 mt-10 font-manrope text-base font-bold">Get started with some experiments</p>
 
   <div class="flex justify-center relative w-3/4 h-64 mx-auto cursor-pointer">
@@ -15,3 +16,5 @@
     <div class="bg-video2 h-52 w-52 z-30 inset-y-0 absolute top-16 right-12 "></div>
   </div>
 </template>
+<script setup lang="ts">
+</script>

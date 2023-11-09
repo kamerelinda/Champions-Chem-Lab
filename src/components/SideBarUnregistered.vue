@@ -12,7 +12,7 @@
 </script>
 
 <template>
-    <nav class="w-24 h-screen bg-white rounded-r-3xl flex flex-col justify-between">
+    <nav class="w-24 bg-white rounded-r-3xl flex flex-col justify-between">
       <div class="mx-auto mt-11">
         <div>
           <IconChampionsLab  v-if="loggedin" class="mx-auto"/>
