@@ -6,27 +6,31 @@
   import IconLogout from "@/components/icons/IconLogout.vue";
   import IconChampionsLab from "@/components/icons/IconChampionsLab.vue";
 
-  import {ref} from "vue";
+  import {useLoadHomeStore} from "@/stores/loadHomepage";
+  const loadHome = useLoadHomeStore()
 
-  const loggedin = ref(false)
+  import  {RouterLink} from "vue-router";
+
 </script>
 
 <template>
     <nav class="w-24 bg-white rounded-r-3xl flex flex-col justify-between">
       <div class="mx-auto mt-11">
         <div>
-          <IconChampionsLab  v-if="loggedin" class="mx-auto"/>
+          <RouterLink to="/">
+            <IconChampionsLab  v-if="loadHome.Home2" class="mx-auto"/>
           <SchoolLogo v-else class="mx-auto"/>
+          </RouterLink>
         </div>
         <div class="mx-auto mt-7">
           <LineIcon/>
         </div>
         <div>
-          <RegisteredNav v-show="loggedin"/>
+          <RegisteredNav v-show="loadHome.Home2"/>
         </div>
       </div>
 <div>
-  <div v-if=loggedin>
+  <div v-if="loadHome.Home2">
     <SettingsLogo class="mx-auto"/>
     <icon-logout class=" mx-auto mb-9 mt-11"/>
   </div>
