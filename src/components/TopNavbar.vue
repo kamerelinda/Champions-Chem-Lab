@@ -3,9 +3,8 @@
   import ToSignUp from "@/components/ToSignUp.vue";
   import IconProfile from "@/components/icons/IconProfile.vue";
 
-  import {ref} from "vue";
-
-  const loggedin = ref(false)
+  import {useLoadHomeStore} from "@/stores/loadHomepage";
+  const loadHome = useLoadHomeStore()
 
 </script>
 
@@ -15,7 +14,7 @@
       <SearchBar/>
     </div>
     <div class="my-auto">
-      <div v-if="loggedin">
+      <div v-if="loadHome.Home2">
       <icon-profile class="mr-10"/>
       </div>
     <div v-else>

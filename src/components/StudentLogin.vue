@@ -1,5 +1,8 @@
 <script setup lang="ts">
 import IconSchoolLogo from "@/components/icons/IconSchoolLogo.vue";
+
+import {useLoadHomeStore} from "@/stores/loadHomepage";
+const loadHome = useLoadHomeStore()
 </script>
 
 
@@ -39,7 +42,7 @@ import IconSchoolLogo from "@/components/icons/IconSchoolLogo.vue";
             </div>
             <a href="#" class="text-sm font-bold text-Primary hover:underline dark:text-primary-500">Forgot password?</a>
           </div>
-          <button type="submit" class="w-full text-white bg-Primary hover:bg-primary-700 focus:ring-4 focus:outline-none focus:ring-primary-300 roundesd text-base font-semibold px-5 py-1.5 text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800">Continue</button>
+          <button @click="loadHome.AddHomePage()" type="submit" class="w-full text-white bg-Primary hover:bg-primary-700 focus:ring-4 focus:outline-none focus:ring-primary-300 roundesd text-base font-semibold px-5 py-1.5 text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800">Continue</button>
           <p class="text-sm font-normal text-Neutral/800 text-center dark:text-gray-400">
             Don’t have an account? <a href="#" class="font-bold text-sm text-Primary hover:underline dark:text-primary-500">Sign up here</a>
           </p>
