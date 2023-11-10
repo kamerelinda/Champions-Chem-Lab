@@ -16,7 +16,9 @@ module.exports = {
         'GreyOverlay': 'rgba(56, 56, 56, 0.20)',
         'Neutral/800': '#191D23',
         'video1': '#3C3C3C',
-        'video2': '#D9D9D9'
+        'video2': '#D9D9D9',
+        'darkest': '#090A0A',
+        'lightest': '#6C7072',
       },
       boxShadow: {
         'box1': '0px 0px 17px 17px rgba(0, 0, 0, 0.25)',
