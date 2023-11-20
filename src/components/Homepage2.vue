@@ -11,7 +11,7 @@ import TrendingVideos from "@/components/TrendingVideos.vue";
 <template>
   <div class="w-full h-full relative">
     <TopNavbar/>
-    <TrainingVideos class="absolute"/>
+    <TrainingVideos/>
     <div class="p-[20px] bg-white w-[1095px] rounded-[5px] ml-[207px] absolute bottom-[5px]">
       <TrendingVideos/>
       <JustForYou/>

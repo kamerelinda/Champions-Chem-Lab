@@ -8,7 +8,7 @@ import CommentSection from "@/components/CommentSection.vue";
 <template>
   <div class="w-full h-full relative">
   <TopNavbar/>
-  <TrainingVideos class="absolute"/>
+  <TrainingVideos/>
   <CommentSection />
   </div>
 </template>
