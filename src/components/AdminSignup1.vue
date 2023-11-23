@@ -18,7 +18,7 @@ const open = ref(true)
       <div class="fixed inset-0 z-10 w-screen overflow-y-auto">
         <div class="flex min-h-full items-end justify-center p-4 text-center sm:items-center sm:p-0">
           <TransitionChild as="template" enter="ease-out duration-300" enter-from="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95" enter-to="opacity-100 translate-y-0 sm:scale-100" leave="ease-in duration-200" leave-from="opacity-100 translate-y-0 sm:scale-100" leave-to="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95">
-            <DialogPanel class="relative transform overflow-hidden rounded-lg bg-white px-4 pb-4 pt-5 text-left shadow-xl transition-all sm:my-8 sm:w-[520px] h-[909px] sm:px-6 sm:py-8">
+            <DialogPanel class="relative transform overflow-hidden rounded-lg bg-white px-4 pb-4 pt-5 text-left shadow-xl transition-all sm:my-8 sm:w-[520px] h-[950px] sm:px-6 sm:py-8">
               <div class=" font-manrope md:mt-0 sm:max-w-md xl:p-0">
                 <div class="space-y-4 md:space-y-6">
                   <div class="flex flex-col justify-center items-center text-center">
@@ -29,6 +29,22 @@ const open = ref(true)
                     </h1>
                     <p class="text-sm font-normal text-Neutral/500 ">We’ll get you up and running so you can verify your personal information and customize your account.</p>
                   </div>
+<!--                  divider section -->
+                  <div class="flex flex-row">
+                    <n-divider dashed class="text-sm text-Neutral/800">
+                      <div class="border-2 rounded bg-Primary border-Primary h-6 w-6 p-1 flex justify-center items-center">1</div>
+                      <div class="pl-1">Sign Up</div>
+                    </n-divider>
+                    <n-divider dashed class="text-sm">
+                      <div class="border-2 rounded border-Primary h-6 w-6 p-1 flex justify-center items-center" >2</div>
+                      <div class="pl-1 text-neutral-400">Build Classroom</div>
+                    </n-divider>
+                    <n-divider dashed class="text-sm">
+                      <div class="border-2 rounded border-Primary  h-6 w-6 p-1 flex justify-center items-center" >3</div>
+                      <div class="pl-1 text-neutral-400">Activate Plan</div>
+                    </n-divider>
+                  </div>
+<!--                  end of divider section-->
                   <form class="space-y-4 md:space-y-6" action="#">
 <!--                         name section-->
                     <div class="flex flex-row gap-x-7 sm:mx-auto">
