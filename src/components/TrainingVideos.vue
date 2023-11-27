@@ -8,10 +8,10 @@
       style="height: 300px; width: 70%; margin-left: auto; margin-right: auto"
       :show-dots="true"
   >
-    <n-carousel-item :style="{ width: '60%' }">
+    <n-carousel-item :style="{ width: '80%' }">
       <img
           class="carousel-img"
-          src="https://naive-ui.oss-cn-beijing.aliyuncs.com/carousel-img/carousel1.jpeg"
+          src="@/assets/image%201.png"
        alt="">
     </n-carousel-item>
     <n-carousel-item :style="{ width: '60%' }">
