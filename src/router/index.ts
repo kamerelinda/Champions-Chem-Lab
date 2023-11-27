@@ -5,10 +5,22 @@ import AssignmentsView from "@/views/AssignmentsView.vue";
 import CommunitiesView from "@/views/CommunitiesView.vue";
 import VideoLessonsView from "@/views/VideoLessonsView.vue";
 import PuzzleGamesView from "@/views/PuzzleGamesView.vue";
+import AdminRegistrationView from "@/views/AdminRegistrationView.vue";
+import LoginView from "@/views/LoginView.vue";
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
+    {
+      path: '/register',
+      name: 'register',
+      component: AdminRegistrationView
+    },
+    {
+      path: '/login',
+      name: 'login',
+      component: LoginView
+    },
     {
       path: '/',
       name: 'home1',

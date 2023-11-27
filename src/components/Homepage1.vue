@@ -3,6 +3,8 @@ import TopNavbar from "@/components/TopNavbar.vue";
 import TrainingVideos from "@/components/TrainingVideos.vue";
 import CommentSection from "@/components/CommentSection.vue";
 
+
+
 </script>
 
 <template>
