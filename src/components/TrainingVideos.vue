@@ -1,4 +1,8 @@
 <template>
+  <div class="py-2 font-bold text-2xl flex justify-center">
+    <h1 v-if="loadHome.Home2">Hi Janet, here’s where you left off</h1>
+    <h2 v-else>Get started with some experiments</h2>
+  </div>
   <div class="width-[70%]">
   <n-carousel
       class="width-"
@@ -45,4 +49,6 @@
 }
 </style>
 <script setup lang="ts">
+import {useLoadHomeStore} from "@/stores/loadHomepage";
+const loadHome = useLoadHomeStore()
 </script>

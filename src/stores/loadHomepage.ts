@@ -2,11 +2,11 @@ import { defineStore } from 'pinia'
 
 export const useLoadHomeStore = defineStore('home', {
     state: () => ({
-        Home2: true
+        Home2: false
     }),
     actions: {
         AddHomePage() {
-            this.Home2 = false
+            this.Home2 = true
         }
     }
 })
