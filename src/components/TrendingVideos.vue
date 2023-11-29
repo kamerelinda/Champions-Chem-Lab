@@ -1,23 +1,4 @@
 <script setup lang="ts">
-const vidCategories = [
-    {
-  id: 1,
-  Title: 'Chemicals'
-},
-  {
-    id: 2,
-    Title: 'Reactions'
-  },
-  {
-    id: 3,
-    Title: 'Symbols'
-  },
-  {
-    id: 4,
-    Title: 'Beginner'
-  },
-
-]
 </script>
 
 <template>
@@ -36,11 +17,24 @@ const vidCategories = [
     </div>
   </form>
 <div class="flex gap-4 mt-2">
-  <div v-for="vid in vidCategories" :key="vid.id">
-    <img  class="mb-[12px]" src="@/assets/pink.png" alt="">
-    <p class="text-darkest font-bold text-sm"> {{vid.Title}} </p>
+    <div class="flex flex-col">
+      <img  class="mb-[12px]" src="@/assets/pink.png" alt="">
+      <p class="text-darkest font-bold text-sm text-center">Chemicals</p>
+    </div>
+  <div class="flex flex-col">
+    <img  class="mb-[12px]" src="@/assets/Streak.png" alt="">
+    <p class="text-darkest font-bold text-sm text-center">Reactions</p>
+  </div>
+  <div class="flex flex-col">
+    <img  class="mb-[12px]" src="@/assets/Blue.png" alt="">
+    <p class="text-darkest font-bold text-sm text-center">Symbols</p>
+  </div>
+  <div class="flex flex-col">
+    <img  class="mb-[12px]" src="@/assets/Orange.png" alt="">
+    <p class="text-darkest font-bold text-sm text-center">Beginner</p>
+  </div>
   </div>
 </div>
-</div>
+
 </template>
 
