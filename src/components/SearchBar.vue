@@ -1,5 +1,5 @@
 <template>
-    <form>
+    <form @submit.prevent="onsubmit">
       <label for="default-search" class="mb-2 text-base font-normal text-Neutral/500 sr-only ">Search</label>
       <div class="relative">
         <div class="absolute inset-y-0 left-0 flex items-center pl-2 pointer-events-none">

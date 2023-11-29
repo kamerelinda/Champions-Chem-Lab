@@ -4,6 +4,7 @@ import IconReplies from "@/components/icons/IconReplies.vue";
 import IconOptions from "@/components/icons/IconOptions.vue";
 import IconDown from "@/components/icons/IconDown.vue";
 
+
 const reviews = {
   featured: [
     {
@@ -48,6 +49,7 @@ const replies = [
 }]
 
 import {usestudentStore} from "@/stores/studentlogin";
+import StudentLogin from "@/components/StudentLogin.vue";
 const studentLogin = usestudentStore()
 </script>
 
@@ -110,13 +112,18 @@ const studentLogin = usestudentStore()
           </div>
         </div>
       </div>
-    <form @click="studentLogin.loggingInStudent()" class="mt-2 sm:flex sm:w-full mb-12">
+    <form @submit.prevent="onsubmit" class="mt-2 sm:flex sm:w-full mb-12">
       <label for="comment" class="sr-only">comment-section</label>
       <input type="text" name="comment" id="comment" class="font-manrope sm:w-full min-w-0 rounded-md border-neutral-200 font-normal bg-white leading-4 px-3 py-2 text-sm text-shadow-sm ring-1 ring-inset ring-white/10 placeholder:text-gray-500 focus:ring-2 focus:ring-inset focus:ring-neutral-500  sm:text-sm sm:leading-6 xl:w-full" placeholder="Login to your student account to participate" />
       <div class="mt-4 sm:ml-4 sm:mt-0 sm:flex-shrink-0">
-        <button class=" w-10 h-10 flex items-center justify-center rounded-md bg-Primary px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-neutral-500">
+        <button @click="studentLogin.loggingInStudent()" class=" w-10 h-10 flex items-center justify-center rounded-md bg-Primary px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-neutral-500">
           <img src="@/assets/Icon.svg" alt=""></button>
       </div>
     </form>
   </div>
+
+  <div v-if ="studentLogin.studentlogin" class="fixed w-full h-full bg-GreyOverlay z-50 flex justify-center items-center">
+    <StudentLogin/>
+  </div>
+
 </template>
