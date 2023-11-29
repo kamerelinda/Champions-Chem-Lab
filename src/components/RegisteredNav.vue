@@ -6,11 +6,14 @@ import IconTrainingVideo from "@/components/icons/IconTrainingVideo.vue";
 import IconCommunities from "@/components/icons/IconCommunities.vue";
 import IconHomework from "@/components/icons/IconHomework.vue";
 
+import {useSidebarOpen} from "@/stores/sidebarOpen";
+const openBar = useSidebarOpen()
+
 import  {RouterLink} from "vue-router";
 </script>
 
 <template>
-  <div>
+  <div :class="openBar.isSidebarOpen ? 'flex flex-col absolute justify-center items-start':''">
     <RouterLink to="/"><icon-home class="mx-auto mt-10 mb-16"/></RouterLink>
      <RouterLink to="/3dgames"> <icon-virtual-games class="mx-auto mb-16"/></RouterLink>
     <RouterLink to="/puzzlegames"><icon-puzzle-games class="mx-auto mb-16"/></RouterLink>
