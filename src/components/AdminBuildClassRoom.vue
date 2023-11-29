@@ -22,7 +22,7 @@ const open = ref(true)
                 <div class="space-y-4 md:space-y-6">
                   <div class="flex flex-col justify-center items-center text-center">
                     <p class="text-Primary pb-2 overflow-hidden text-ellipsis whitespace-nowrap text-base font-extrabold">Champions Chem Lab</p>
-                    <img class="w-16 h-16 pb-2" src="/src/assets/Logo.png" alt="school logo" />
+                    <img class="w-16 h-16 pb-2" src="@/assets/Logo.png" alt="school logo" />
                     <h1 class="text-xl pb-2 font-bold leading-tight tracking-tight text-Neutral/800 md:text-2xl dark:text-white">
                       Build your Classroom
                     </h1>
