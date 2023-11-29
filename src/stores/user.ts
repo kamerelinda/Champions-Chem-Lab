@@ -1,12 +1,12 @@
 import { defineStore } from 'pinia'
 
-export const useCounterStore = defineStore('user', {
+export const useAdminStore = defineStore('admin', {
   state: () => ({
     loggedin: false
   }),
   actions: {
     loggingInUser() {
-      this.loggedin = true
+      this.loggedin = !this.loggedin
     },
   }
 })

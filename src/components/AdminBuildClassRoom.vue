@@ -12,7 +12,7 @@ const open = ref(true)
   <TransitionRoot as="template" :show="open">
     <Dialog as="div" class="relative z-10" @close="open = false">
       <TransitionChild as="template" enter="ease-out duration-300" enter-from="opacity-0" enter-to="opacity-100" leave="ease-in duration-200" leave-from="opacity-100" leave-to="opacity-0">
-        <div class="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity" />
+        <div class="fixed inset-0 bg-gray-500 bg-opacity-90 transition-opacity" />
       </TransitionChild>
 
       <div class="fixed inset-0 z-10 w-screen overflow-y-auto">
@@ -45,7 +45,7 @@ const open = ref(true)
                     </n-divider>
                   </div>
                   <!--                  end of divider section-->
-                  <form class="space-y-4 md:space-y-6" action="#">
+                  <form class="space-y-4 md:space-y-6" action="#" @submit.prevent="onsubmit">
 
                     <!--                   Class Name section-->
                     <div>
@@ -91,7 +91,3 @@ const open = ref(true)
     </Dialog>
   </TransitionRoot>
 </template>
-
-<style scoped>
-
-</style>

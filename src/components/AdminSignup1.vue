@@ -4,15 +4,19 @@ import {Dialog, DialogPanel, TransitionChild, TransitionRoot} from "@headlessui/
 import {EyeIcon} from "@heroicons/vue/24/outline";
 import {ref} from "vue";
 import IconSchoolLogo from "@/components/icons/IconSchoolLogo.vue";
+import {usebuildStore} from "@/stores/buildclass";
+const buildClass = usebuildStore()
 
 const open = ref(true)
+// import AdminLogin from "@/components/AdminLogin.vue";
+import AdminBuildClassRoom from "@/components/AdminBuildClassRoom.vue";
 </script>
 
 <template>
   <TransitionRoot as="template" :show="open">
     <Dialog as="div" class="relative z-10" @close="open = false">
       <TransitionChild as="template" enter="ease-out duration-300" enter-from="opacity-0" enter-to="opacity-100" leave="ease-in duration-200" leave-from="opacity-100" leave-to="opacity-0">
-        <div class="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity" />
+        <div class="fixed inset-0 bg-gray-500 bg-opacity-100 transition-opacity" />
       </TransitionChild>
 
       <div class="fixed inset-0 z-10 w-screen overflow-y-auto">
@@ -45,7 +49,7 @@ const open = ref(true)
                     </n-divider>
                   </div>
 <!--                  end of divider section-->
-                  <form class="space-y-4 md:space-y-6" action="#">
+                  <form class="space-y-4 md:space-y-6" action="#" @submit.prevent="onsubmit">
 <!--                         name section-->
                     <div class="flex flex-row gap-x-7 sm:mx-auto">
                       <div>
@@ -79,9 +83,9 @@ const open = ref(true)
                       </div>
                     </div>
                     <div>
-                      <label for="password" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Confirm Password</label>
+                      <label for="confirm password" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Confirm Password</label>
                       <div class="relative">
-                      <input type="password" name="password" id="password" placeholder="••••••••" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required>
+                      <input type="password" name=" confirm password" id="confirm password" placeholder="••••••••" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required>
                         <div class="w-4 h-4 absolute inset-y-0 right-2 my-auto cursor-pointer">
                           <EyeIcon />
                         </div>
@@ -111,7 +115,7 @@ const open = ref(true)
                     </div>
 <!--                    end of how did you hear about us-->
 <!--                    sign up button-->
-                    <button type="submit" class="w-full text-white bg-Primary hover:bg-primary-700 focus:ring-4 focus:outline-none focus:ring-primary-300 roundesd text-base font-semibold px-5 py-1.5 text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800">Sign Up</button>
+                    <button @click="buildClass.buildingClass(); open=false" type="submit" class="w-full text-white bg-Primary hover:bg-primary-700 focus:ring-4 focus:outline-none focus:ring-primary-300 roundesd text-base font-semibold px-5 py-1.5 text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800">Sign Up</button>
                     <p class="text-sm font-normal text-Neutral/800 text-center dark:text-gray-400">
                       Already have an account? <a href="#" class="font-bold text-sm text-Primary hover:underline dark:text-primary-500">Login here</a>
                     </p>
@@ -124,8 +128,7 @@ const open = ref(true)
       </div>
     </Dialog>
   </TransitionRoot>
+  <div>
+    <AdminBuildClassRoom v-if ="buildClass.build"/>
+  </div>
 </template>
-
-<style scoped>
-
-</style>
