@@ -4,7 +4,7 @@
 
 <template>
 <div class=" border border-gray-200 bg-white rounded-md w-[46px] h-[25px] flex justify-center items-center">
-  <img src="@/assets/visa.png" alt="visa logo">
+  <img src="../../assets/images/Payments/visa.png" alt="visa logo">
 </div>
 </template>
 
