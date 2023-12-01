@@ -1,17 +1,23 @@
 <script setup lang="ts">
+  import {Dialog, DialogPanel, TransitionChild, TransitionRoot} from "@headlessui/vue";
+  import {ref} from "vue";
+  import {useRouter} from "vue-router";
 
-import {useLoadHomeStore} from "@/stores/loadHomepage";
-import {Dialog, DialogPanel, TransitionChild, TransitionRoot} from "@headlessui/vue";
-import {ref} from "vue";
-const loadHome = useLoadHomeStore()
-
-const open = ref(true)
+  const router = useRouter();
+  const open = ref(true);
+  const closeModal = () => {
+    open.value = false;
+  };
+  const goToAnotherPage = () => {
+    closeModal();
+    router.push('/homepage')
+  };
 </script>
 
 
 <template>
   <TransitionRoot as="template" :show="open">
-    <Dialog as="div" class="relative z-50" @close="open = false">
+    <Dialog as="div" class="relative z-50">
       <TransitionChild as="template" enter="ease-out duration-300" enter-from="opacity-0" enter-to="opacity-100" leave="ease-in duration-200" leave-from="opacity-100" leave-to="opacity-0">
         <div class="fixed inset-0 bg-gray-500 bg-opacity-100 transition-opacity" />
       </TransitionChild>
@@ -24,7 +30,7 @@ const open = ref(true)
                 <div class="p-6 space-y-4 md:space-y-6 sm:p-8">
                   <div class="flex flex-col justify-center items-center text-center">
                     <p class="text-Primary pb-2 overflow-hidden text-ellipsis whitespace-nowrap text-base font-extrabold">Champions Chem Lab</p>
-                    <img class="w-16 h-16 pb-2" src="@/assets/Logo.png" alt="school logo" />
+                    <img class="w-16 h-16 pb-2" src="../../../assets/images/School%20Logo/Logo.png" alt="school logo" />
                     <h1 class="text-xl pb-2 font-bold leading-tight tracking-tight text-Neutral/800 md:text-2xl dark:text-white">
                       Student Login
                     </h1>
@@ -54,7 +60,7 @@ const open = ref(true)
                       </div>
                       <a href="#" class="text-sm font-bold text-Primary hover:underline dark:text-primary-500">Forgot password?</a>
                     </div>
-                    <button @click="loadHome.AddHomePage()" type="submit" class="w-full text-white bg-Primary hover:bg-primary-700 focus:ring-4 focus:outline-none focus:ring-primary-300 roundesd text-base font-semibold px-5 py-1.5 text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800">Continue</button>
+                    <button @click="goToAnotherPage()" type="submit" class="w-full text-white bg-Primary hover:bg-primary-700 focus:ring-4 focus:outline-none focus:ring-primary-300 rounded text-base font-semibold px-5 py-1.5 text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800">Continue</button>
                     <p class="text-sm font-normal text-Neutral/800 text-center dark:text-gray-400">
                       Don’t have an account? <a href="#" class="font-bold text-sm text-Primary hover:underline dark:text-primary-500">Sign up here</a>
                     </p>

@@ -15,7 +15,7 @@
     <n-carousel-item :style="{ width: '80%' }">
       <img
           class="carousel-img"
-          src="@/assets/image%201.png"
+          src="../../../assets/images/Homepage/image%201.png"
        alt="">
     </n-carousel-item>
     <n-carousel-item :style="{ width: '60%' }">

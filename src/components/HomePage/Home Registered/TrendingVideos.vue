@@ -18,19 +18,19 @@
   </form>
 <div class="flex gap-4 mt-2">
     <div class="flex flex-col">
-      <img  class="mb-[12px]" src="@/assets/pink.png" alt="">
+      <img class="mb-[12px]" src="../../../assets/images/Homepage/pink.png" alt="">
       <p class="text-darkest font-bold text-sm text-center">Chemicals</p>
     </div>
   <div class="flex flex-col">
-    <img  class="mb-[12px]" src="@/assets/Streak.png" alt="">
+    <img class="mb-[12px]" src="../../../assets/images/Homepage/Streak.png" alt="">
     <p class="text-darkest font-bold text-sm text-center">Reactions</p>
   </div>
   <div class="flex flex-col">
-    <img  class="mb-[12px]" src="@/assets/Blue.png" alt="">
+    <img class="mb-[12px]" src="../../../assets/images/Homepage/Blue.png" alt="">
     <p class="text-darkest font-bold text-sm text-center">Symbols</p>
   </div>
   <div class="flex flex-col">
-    <img  class="mb-[12px]" src="@/assets/Orange.png" alt="">
+    <img class="mb-[12px]" src="../../../assets/images/Homepage/Orange.png" alt="">
     <p class="text-darkest font-bold text-sm text-center">Beginner</p>
   </div>
   </div>

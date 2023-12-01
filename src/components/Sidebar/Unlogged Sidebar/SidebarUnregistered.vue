@@ -9,7 +9,7 @@ import SettingsLogo from "@/components/icons/IconSettings.vue";
       class=" mx-auto bg-white rounded-r-3xl flex flex-col justify-between items-center">
     <div class="mx-auto mt-11">
       <div>
-        <img class="w-16 h-16" src="src/assets/Logo.png" alt="school logo">
+        <img class="w-16 h-16" src="../../../assets/images/School%20Logo/Logo.png" alt="school logo">
       </div>
       <div class="mx-auto mt-7">
         <LineIcon />

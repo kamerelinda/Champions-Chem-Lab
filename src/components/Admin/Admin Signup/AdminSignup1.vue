@@ -1,18 +1,27 @@
 <script setup lang="ts">
+  import {Dialog, DialogPanel, TransitionChild, TransitionRoot} from "@headlessui/vue";
+  import {EyeIcon} from "@heroicons/vue/24/outline";
+  import {ref} from "vue";
+  import {useRouter} from "vue-router";
 
-import {Dialog, DialogPanel, TransitionChild, TransitionRoot} from "@headlessui/vue";
-import {EyeIcon} from "@heroicons/vue/24/outline";
-import {ref} from "vue";
-import {usebuildStore} from "@/stores/buildclass";
-const buildClass = usebuildStore()
-
-const open = ref(true)
-import AdminBuildClassRoom from "@/components/AdminBuildClassRoom.vue";
+  const router = useRouter();
+  const open = ref(true);
+  const closeModal = () => {
+    open.value = false;
+  };
+  const goToLogin = () =>{
+    closeModal();
+    router.push('/admin_login')
+  }
+  const buildAClass = () =>{
+    closeModal();
+    router.push('/signup/build_classroom')
+  }
 </script>
 
 <template>
   <TransitionRoot as="template" :show="open">
-    <Dialog as="div" class="relative z-10" @close="open = false">
+    <Dialog as="div" class="relative z-10">
       <TransitionChild as="template" enter="ease-out duration-300" enter-from="opacity-0" enter-to="opacity-100" leave="ease-in duration-200" leave-from="opacity-100" leave-to="opacity-0">
         <div class="fixed inset-0 bg-gray-500 bg-opacity-100 transition-opacity" />
       </TransitionChild>
@@ -25,7 +34,7 @@ import AdminBuildClassRoom from "@/components/AdminBuildClassRoom.vue";
                 <div class="space-y-4 md:space-y-6">
                   <div class="flex flex-col justify-center items-center text-center">
                     <p class="text-Primary pb-2 overflow-hidden text-ellipsis whitespace-nowrap text-base font-extrabold">Champions Chem Lab</p>
-                    <img class="w-16 h-16 pb-2" src="@/assets/Logo.png" alt="school logo" />
+                    <img class="w-16 h-16 pb-2" src="../../../assets/images/School%20Logo/Logo.png" alt="school logo" />
                     <h1 class="text-xl pb-2 font-bold leading-tight tracking-tight text-Neutral/800 md:text-2xl dark:text-white">
                       Admin Sign Up
                     </h1>
@@ -53,37 +62,37 @@ import AdminBuildClassRoom from "@/components/AdminBuildClassRoom.vue";
                       <div>
                         <label for="firstName" class="block text-sm font-medium leading-6 text-gray-900">First Name</label>
                         <div class="mt-2">
-                          <input type="text" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Jane" required/>
+                          <input type="text" id="firstName" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Jane" autocomplete="on" required/>
                         </div>
                       </div>
                       <div>
                         <label for="lastName" class="block text-sm font-medium leading-6 text-gray-900">Last Name</label>
                         <div class="mt-2">
-                          <input type="text" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Doe" required/>
+                          <input type="text" id="lastName" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Doe" autocomplete="on" required/>
                         </div>
                       </div>
                     </div>
 <!--                    end of name section -->
 <!--                    email section-->
                     <div>
-                      <label for="email" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Email Address</label>
-                      <input type="email" name="email" id="email" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="hello@example.com" required>
+                      <label for="signup_email" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Email Address</label>
+                      <input type="email" name="email" id="signup_email" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="hello@example.com" autocomplete="on" required>
                     </div>
 <!--                    end of email section-->
 <!--                    Password section-->
                     <div>
-                      <label for="password" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Create Password</label>
+                      <label for="signup_password" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Create Password</label>
                       <div class="relative">
-                      <input type="password" name="password" id="password" placeholder="••••••••" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required >
+                      <input type="password" name="password" id="signup_password" placeholder="••••••••" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" autocomplete="on" required >
                       <div class="w-4 h-4 absolute inset-y-0 right-2 my-auto cursor-pointer">
                         <EyeIcon />
                       </div>
                       </div>
                     </div>
                     <div>
-                      <label for="confirm password" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Confirm Password</label>
+                      <label for="confirm_password" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Confirm Password</label>
                       <div class="relative">
-                      <input type="password" name=" confirm password" id="confirm password" placeholder="••••••••" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required>
+                      <input type="password" name=" confirm password" id="confirm_password" placeholder="••••••••" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" autocomplete="on" required>
                         <div class="w-4 h-4 absolute inset-y-0 right-2 my-auto cursor-pointer">
                           <EyeIcon />
                         </div>
@@ -94,10 +103,10 @@ import AdminBuildClassRoom from "@/components/AdminBuildClassRoom.vue";
                     <div class="flex items-center justify-between">
                       <div class="flex items-start">
                         <div class="flex items-center h-5">
-                          <input id="tick" aria-describedby="remember" type="checkbox" class="w-4 h-4 border border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-primary-300 dark:bg-gray-700 dark:border-gray-600 dark:focus:ring-primary-600 dark:ring-offset-gray-800" required>
+                          <input id="tick" aria-describedby="remember" type="checkbox" class="w-4 h-4 border border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-primary-300 dark:bg-gray-700 dark:border-gray-600 dark:focus:ring-primary-600 dark:ring-offset-gray-800" autocomplete="on" required>
                         </div>
                         <div class="ml-3 text-sm">
-                          <label for="remember" class="text-gray-500 dark:text-gray-300">Remember Me</label>
+                          <label for="tick" class="text-gray-500 dark:text-gray-300">Remember Me</label>
                         </div>
                       </div>
                     </div>
@@ -105,7 +114,7 @@ import AdminBuildClassRoom from "@/components/AdminBuildClassRoom.vue";
 <!--                    How did you hear about us-->
                     <div>
                       <label for="reference" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">How did you hear about us? (optional)</label>
-                      <select class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                      <select id="reference" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
                         <option value="">Friends&Family</option>
                         <option value="">Social Media</option>
                         <option value="">Other</option>
@@ -113,9 +122,9 @@ import AdminBuildClassRoom from "@/components/AdminBuildClassRoom.vue";
                     </div>
 <!--                    end of how did you hear about us-->
 <!--                    sign up button-->
-                    <button @click="buildClass.buildingClass(); open=false" type="submit" class="w-full text-white bg-Primary hover:bg-primary-700 focus:ring-4 focus:outline-none focus:ring-primary-300 roundesd text-base font-semibold px-5 py-1.5 text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800">Sign Up</button>
+                    <button @click="buildAClass()" type="submit" class="w-full text-white bg-Primary hover:bg-primary-700 focus:ring-4 focus:outline-none focus:ring-primary-300 rounded text-base font-semibold px-5 py-1.5 text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800">Sign Up</button>
                     <p class="text-sm font-normal text-Neutral/800 text-center dark:text-gray-400">
-                      Already have an account? <a href="#" class="font-bold text-sm text-Primary hover:underline dark:text-primary-500">Login here</a>
+                      Already have an account? <a @click="goToLogin()" href="#" class="font-bold text-sm text-Primary hover:underline dark:text-primary-500">Login here</a>
                     </p>
                   </form>
                 </div>
@@ -126,7 +135,4 @@ import AdminBuildClassRoom from "@/components/AdminBuildClassRoom.vue";
       </div>
     </Dialog>
   </TransitionRoot>
-  <div>
-    <AdminBuildClassRoom v-if ="buildClass.build"/>
-  </div>
 </template>

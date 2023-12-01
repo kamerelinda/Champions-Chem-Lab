@@ -31,7 +31,7 @@ const videos = [
 
   <div class="flex gap-4">
     <div v-for="video in videos" :key="video.id">
-      <img src="@/assets/Image%20Placeholder%20(Copy%20paste%20here).png" alt="" class="mb-[12px]">
+      <img src="../../../assets/images/Homepage/Image%20Placeholder%20(Copy%20paste%20here).png" alt="" class="mb-[12px]">
       <p class="mb-2 text-base font-bold text-darkest">{{video.Title}}</p>
       <p class="text-xs font-normal text-lightest"> {{video.Description}}</p>
     </div>

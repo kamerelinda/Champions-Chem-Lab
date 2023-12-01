@@ -1,13 +1,17 @@
 <script setup lang="ts">
-  import SettingsLogo from "./icons/IconSettings.vue"
-  import LineIcon from "./icons/IconLine.vue"
-  import RegisteredNav from "@/components/RegisteredNav.vue";
+  import SettingsLogo from "../../icons/IconSettings.vue"
+  import LineIcon from "../../icons/IconLine.vue"
+  import RegisteredNav from "@/components/Sidebar/LoggedinSidebar/RegisteredNav.vue";
   import IconLogout from "@/components/icons/IconLogout.vue";
   import IconChampionsLab from "@/components/icons/IconChampionsLab.vue";
 
   import {useSidebarOpen} from "@/stores/sidebarOpen";
   const openBar = useSidebarOpen()
-
+  import {useRouter} from "vue-router";
+  const router = useRouter();
+  const goToHome = () => {
+    router.push('/')
+  };
 </script>
 
 <template>
@@ -27,7 +31,7 @@
       <div>
         <div>
           <SettingsLogo class="mx-auto"/>
-          <icon-logout class=" mx-auto mb-9 mt-11"/>
+          <icon-logout @click="goToHome()" class=" mx-auto mb-9 mt-11 cursor-pointer"/>
         </div>
 
 
