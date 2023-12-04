@@ -1,16 +1,16 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import HomeView from "@/views/Home/HomeView.vue";
-import VirtualGamesView from "@/views/Nav Pages/VirtualGamesView.vue";
-import AssignmentsView from "@/views/Nav Pages/AssignmentsView.vue";
-import CommunitiesView from "@/views/Nav Pages/CommunitiesView.vue";
-import VideoLessonsView from "@/views/Nav Pages/VideoLessonsView.vue";
-import PuzzleGamesView from "@/views/Nav Pages/PuzzleGamesView.vue";
-import HomePageView from "@/views/Home/HomePageView.vue";
-import AdminLoginView from "@/views/Admin Login/AdminLoginView.vue";
-import AdminRegistrationView from "@/views/Admin SignUp/AdminRegistrationView.vue";
-import AdminActivateView from "@/views/Admin SignUp/AdminActivateView.vue";
-import AdminBuildClassView from "@/views/Admin SignUp/AdminBuildClassView.vue";
-import StudentLoginView from "@/views/Student Login/StudentLoginView.vue";
+import HomeView from '@/views/Home/HomeView.vue'
+import VirtualGamesView from '@/views/Nav Pages/VirtualGamesView.vue'
+import AssignmentsView from '@/views/Nav Pages/AssignmentsView.vue'
+import CommunitiesView from '@/views/Nav Pages/CommunitiesView.vue'
+import VideoLessonsView from '@/views/Nav Pages/VideoLessonsView.vue'
+import PuzzleGamesView from '@/views/Nav Pages/PuzzleGamesView.vue'
+import HomePageView from '@/views/Home/HomePageView.vue'
+import AdminLoginView from '@/views/Admin Login/AdminLoginView.vue'
+import AdminRegistrationView from '@/views/Admin SignUp/AdminRegistrationView.vue'
+import AdminActivateView from '@/views/Admin SignUp/AdminActivateView.vue'
+import AdminBuildClassView from '@/views/Admin SignUp/AdminBuildClassView.vue'
+import StudentLoginView from '@/views/Student Login/StudentLoginView.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -75,8 +75,7 @@ const router = createRouter({
       path: '/assignments',
       name: 'homework',
       component: AssignmentsView
-    },
-
+    }
   ]
 })
 

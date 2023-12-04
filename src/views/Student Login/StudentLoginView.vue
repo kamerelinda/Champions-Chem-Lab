@@ -1,11 +1,9 @@
 <script setup lang="ts">
-  import StudentLogin from "@/components/Student/Student Login/StudentLogin.vue";
+import StudentLogin from '@/components/Student/Student Login/StudentLogin.vue'
 </script>
 
 <template>
-  <StudentLogin/>
+  <StudentLogin />
 </template>
 
-<style scoped>
-
-</style>
+<style scoped></style>

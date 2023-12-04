@@ -4,39 +4,39 @@
     <h2 v-else>Get started with some experiments</h2>
   </div>
   <div class="width-[70%]">
-  <n-carousel
+    <n-carousel
       class="width-"
       effect="card"
       prev-slide-style="transform: translateX(-150%) translateZ(-800px);"
       next-slide-style="transform: translateX(50%) translateZ(-800px);"
       style="height: 300px; width: 70%; margin-left: auto; margin-right: auto"
       :show-dots="true"
-  >
-    <n-carousel-item :style="{ width: '80%' }">
-      <img
-          class="carousel-img"
-          src="../../../assets/images/Homepage/image%201.png"
-       alt="">
-    </n-carousel-item>
-    <n-carousel-item :style="{ width: '60%' }">
-      <img
+    >
+      <n-carousel-item :style="{ width: '80%' }">
+        <img class="carousel-img" src="../../../assets/images/Homepage/image%201.png" alt="" />
+      </n-carousel-item>
+      <n-carousel-item :style="{ width: '60%' }">
+        <img
           class="carousel-img"
           src="https://naive-ui.oss-cn-beijing.aliyuncs.com/carousel-img/carousel2.jpeg"
-       alt="">
-    </n-carousel-item>
-    <n-carousel-item :style="{ width: '60%' }">
-      <img
+          alt=""
+        />
+      </n-carousel-item>
+      <n-carousel-item :style="{ width: '60%' }">
+        <img
           class="carousel-img"
           src="https://naive-ui.oss-cn-beijing.aliyuncs.com/carousel-img/carousel3.jpeg"
-       alt="">
-    </n-carousel-item>
-    <n-carousel-item :style="{ width: '60%' }">
-      <img
+          alt=""
+        />
+      </n-carousel-item>
+      <n-carousel-item :style="{ width: '60%' }">
+        <img
           class="carousel-img"
           src="https://naive-ui.oss-cn-beijing.aliyuncs.com/carousel-img/carousel4.jpeg"
-       alt="">
-    </n-carousel-item>
-  </n-carousel>
+          alt=""
+        />
+      </n-carousel-item>
+    </n-carousel>
   </div>
 </template>
 
@@ -49,6 +49,7 @@
 }
 </style>
 <script setup lang="ts">
-import {useLoadHomeStore} from "@/stores/loadHomepage";
+import { useLoadHomeStore } from '@/stores/loadHomepage'
+
 const loadHome = useLoadHomeStore()
 </script>
