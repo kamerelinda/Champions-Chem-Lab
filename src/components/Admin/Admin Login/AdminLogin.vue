@@ -1,21 +1,21 @@
-<script setup>
-import { Dialog, DialogPanel, TransitionChild, TransitionRoot } from '@headlessui/vue'
-import { ref } from 'vue'
-import { useRouter } from 'vue-router'
+<script setup lang="ts">
+import { Dialog, DialogPanel, TransitionChild, TransitionRoot } from "@headlessui/vue";
+import { ref } from "vue";
+import { useRouter } from "vue-router";
 
-const router = useRouter()
-const open = ref(true)
+const router = useRouter();
+const open = ref(true);
 const closeModal = () => {
-  open.value = false
-}
+  open.value = false;
+};
 const goToAnotherPage = () => {
-  closeModal()
-  router.push('/homepage')
-}
+  closeModal();
+  router.push("/homepage");
+};
 const goToSignUp = () => {
-  closeModal()
-  router.push('/signup')
-}
+  closeModal();
+  router.push("/signup");
+};
 </script>
 
 <template>
@@ -78,7 +78,7 @@ const goToSignUp = () => {
                       <label
                         for="login_email"
                         class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                        >Email Address</label
+                      >Email Address</label
                       >
                       <input
                         type="email"
@@ -94,7 +94,7 @@ const goToSignUp = () => {
                       <label
                         for="login_password"
                         class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                        >Password</label
+                      >Password</label
                       >
                       <input
                         type="password"
@@ -120,14 +120,14 @@ const goToSignUp = () => {
                         </div>
                         <div class="ml-3 text-sm">
                           <label for="login_tick" class="text-gray-500 dark:text-gray-300"
-                            >Keep me signed in</label
+                          >Keep me signed in</label
                           >
                         </div>
                       </div>
                       <a
                         href="#"
                         class="text-sm font-bold text-Primary hover:underline dark:text-primary-500"
-                        >Forgot password?</a
+                      >Forgot password?</a
                       >
                     </div>
                     <button
@@ -142,7 +142,7 @@ const goToSignUp = () => {
                       <a
                         @click="goToSignUp()"
                         class="font-bold text-sm text-Primary hover:underline dark:text-primary-500"
-                        >Sign up here</a
+                      >Sign up here</a
                       >
                     </p>
                   </form>
